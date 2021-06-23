@@ -1,11 +1,10 @@
----
 kind: pipeline
 type: docker
 name: default
 
 platform:
   os: linux
-  arch: amd32
+  arch: amd64
 
 steps:
 - name: build
