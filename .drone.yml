@@ -10,11 +10,7 @@ platform:
 steps:
 - name: test
   image: golang:1.14.4
-  commands:
-  - go test drone/src
   
-- name: build
-  image: golang:1.14.4
   commands:
   - sh scripts/build.sh
   environment:
