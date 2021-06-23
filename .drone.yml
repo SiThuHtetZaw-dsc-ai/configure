@@ -11,4 +11,6 @@ steps:
 - name: build
   image: golang
   commands:
+  - go mod init
   - go build
+  - go test
