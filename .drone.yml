@@ -1,10 +1,10 @@
 ---
 kind: pipeline
 type: docker
-name: linux-amd64
+name: linux-amd
 
 platform:
-  arch: amd64
+  arch: amd
   os: linux
 
 steps:
