@@ -1,7 +1,10 @@
----
 kind: pipeline
 type: docker
 name: default
+
+platform:
+  os: linux
+  arch: amd64
 
 steps:
 - name: build
@@ -9,4 +12,3 @@ steps:
   commands:
   - go build
   - go test
-    
