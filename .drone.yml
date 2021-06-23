@@ -11,6 +11,6 @@ steps:
 - name: build
   image: golang
   commands:
-  - go mod init
+  - go mod init sithu.digitalstacks.net/m/v2
   - go build
   - go test
