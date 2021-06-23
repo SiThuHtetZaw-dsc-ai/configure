@@ -11,8 +11,6 @@ steps:
 - name: test
   image: golang:1.14.4
   
-  commands:
-  - sh scripts/build.sh
   environment:
     GOARCH: amd64
     GOOS: linux
