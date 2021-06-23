@@ -4,9 +4,13 @@ name: default
 
 platform:
   os: linux
-  arch: arm64
+  arch: amd64
 
 steps:
 - name: build
   image: golang
+ 
+git clone https://github.com/ianlini/drone-example.git
+cd drone-example
+
 
