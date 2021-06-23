@@ -5,7 +5,7 @@ name: default
 platform:
   os: linux
   arch: amd64
-  version: 1903
+  version: 1809
 
 steps:
 - name: build
