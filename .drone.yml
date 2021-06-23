@@ -1,16 +1,12 @@
 ---
 kind: pipeline
 type: docker
-name: linux-amd64
+name: default
 
 platform:
-  arch: amd64
   os: linux
+  arch: arm64
 
 steps:
-- name: test
-  image: golang:1.14.4
-  
-  environment:
-    GOARCH: amd64
-    GOOS: linux
+- name: build
+  image: golang
