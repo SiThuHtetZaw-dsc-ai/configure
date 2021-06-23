@@ -13,3 +13,4 @@ steps:
   commands:
   - go mod init sithu.digitalstacks.net/m/v2
   - go build
+  - go files /drone/src
