@@ -1,15 +1,23 @@
 ---
-kind: pipeline
-type: docker
-name: default
+pipeline:
+  build:
+    image: golang
+    commands:
+      - go get -v
+      - ...
 
-steps:
-- name: build
-  image: golang
-  commands:
-  - go build
-  - go test
+  docker_build:
+    image: docker:1.11
+    commands:
+      - docker login ...
+      - docker build -t foo/bar:${DRONE_COMMIT_SHA} .
+      - docker push foo/bar:${DRONE_COMMIT_SHA}
 
-trigger:
-  branch:
-  - master
+  trigger_deploy:
+    image: quay.io/ukhomeofficedigital/drone-trigger:latest
+    drone_server: http://situ.digitalstacks.net
+    repo: owner/go-deploy-scripts
+    branch: master
+    deploy_to: prod
+    params: "IMAGE_NAME=foo/bar:${DRONE_COMMIT_SHA},APP_ID=123"
+
