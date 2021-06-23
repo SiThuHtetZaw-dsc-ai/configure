@@ -10,7 +10,4 @@ steps:
 - name: build
   image: golang
  
-git clone https://github.com/ianlini/drone-example.git
-cd drone-example
-
 
